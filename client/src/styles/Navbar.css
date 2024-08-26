@@ -232,4 +232,9 @@
         height: 25px;
     }
 
+    .navbar-mobile-menu-close{
+        font-size: 3rem;
+        margin-top: -10px;
+    }
+
 }
