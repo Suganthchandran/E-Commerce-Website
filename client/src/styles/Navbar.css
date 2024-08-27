@@ -191,6 +191,10 @@
     position: relative;
 }
 
+.navbar-mobile-menu-item:active{
+    background-color: black;
+}
+
 .navbar-mobile-menu-item::after {
     content: '';
     display: block;
