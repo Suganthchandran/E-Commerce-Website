@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
 .policy{
     display: flex;
     padding:2rem 0;
@@ -6,11 +8,17 @@
     gap: 3rem;
     text-align: center;
     margin-bottom: 0.1rem;
-    /* border: 1px solid rgb(179, 179, 179); */
+    font-family: Mukta;
 }
 
 .policy img{
     margin-bottom: 1.25rem;
+}
+
+.policy-main-text{
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
 }
 
 @media (max-width:550px) {

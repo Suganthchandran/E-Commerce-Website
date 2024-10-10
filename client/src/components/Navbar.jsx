@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../styles/Navbar.css';
 import { assets } from '../assets/assets';
+import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isMenuVisible, setMenuVisible] = useState(false);
+  const {setShowSearch} = useContext(ShopContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -21,6 +25,13 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuVisible(!isMenuVisible);
   };
+
+  const searchFunction = () => {
+    if(!location.pathname.includes('collection')) {
+      navigate('/collection');
+    }
+    setShowSearch(true);
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,7 +68,7 @@ const Navbar = () => {
       </div>
 
       <div className='navbar-icons'>
-        <img src={assets.search_icon} alt='search' />
+        <img onClick={searchFunction} src={assets.search_icon} alt='search' />
         <div 
           className='navbar-dp-items' 
           onMouseEnter={handleMouseEnter} 

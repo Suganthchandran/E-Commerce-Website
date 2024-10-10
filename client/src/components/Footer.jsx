@@ -39,6 +39,10 @@ const Footer = () => {
           </form>
         </div>
       </div>
+      <div>
+        <hr/>
+        <p className='footer-copyrights'>Copyright 2024@ Diago.com - All Right Reserved.</p>
+      </div>
     </footer>
   );
 }

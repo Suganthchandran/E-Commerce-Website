@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
 .footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     gap: 5rem;
     margin-top: 3rem;
     padding: 3rem 0;
     background-color: #f8f9fa;
+    font-family: "Exo 2";
     border: 1px solid rgb(199, 199, 199) ;
   }
   
@@ -74,7 +78,7 @@
   
   .subscribe-button {
     padding: 0.5rem 1rem;
-    background-color: #007bff;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -83,7 +87,15 @@
   }
   
   .subscribe-button:hover {
-    background-color: #0056b3;
+    background-color: #303030;
+  }
+
+  .footer-copyrights{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: -30px;
+    font-weight: 700;
   }
   
   @media (max-width: 768px) {
