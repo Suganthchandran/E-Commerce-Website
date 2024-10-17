@@ -16,7 +16,7 @@ const LatestCollection = () => {
   return (
     <div className='latestcollection'>
         <div>
-          <Title title1={'LATEST'} title2={'COLLECTION'} />
+          <Title title1={'LATEST'} title2={'COLLECTION'} size={'2.3rem'} position={'center'}/>
           <p className='latestcollection-text'>Here Visit the Latest Collection of Diago and I hope you will buy and make your life happier and fruitfully</p>
         </div>
         <div className='latestcollection-images'>

@@ -18,7 +18,7 @@ const BestSeller = () => {
   return (
     <div className='bestseller'>
         <div>
-          <Title title1={'BEST'} title2={'SELLER'} />
+          <Title title1={'BEST'} title2={'SELLER'} size={'2.3rem'} position={'center'}/>
           <p className='bestseller-text'>Here Visit the Best Sellers of Diago and I hope you will buy and make your life happier and fruitfully</p>
         </div>
         <div className='bestseller-images'>

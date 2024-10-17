@@ -8,7 +8,7 @@ import { ShopContext } from '../context/ShopContext';
 const Navbar = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isMenuVisible, setMenuVisible] = useState(false);
-  const {setShowSearch} = useContext(ShopContext);
+  const { setShowSearch, getCartCount } = useContext(ShopContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     setTimeout(() => {
       setDropdownVisible(false);
-    }, 2000);
+    }, 1000);
   };
 
   const toggleMenu = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   const searchFunction = () => {
-    if(!location.pathname.includes('collection')) {
+    if (!location.pathname.includes('collection')) {
       navigate('/collection');
     }
     setShowSearch(true);
@@ -69,12 +69,12 @@ const Navbar = () => {
 
       <div className='navbar-icons'>
         <img onClick={searchFunction} src={assets.search_icon} alt='search' />
-        <div 
-          className='navbar-dp-items' 
-          onMouseEnter={handleMouseEnter} 
+        <div
+          className='navbar-dp-items'
+          onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <img className='navbar-dp' src={assets.profile_icon} alt='dp' />
+         <Link to='/login'> <img className='navbar-dp' src={assets.profile_icon} alt='dp' /> </Link>
           <div className={`navbar-dp-dropdown ${isDropdownVisible ? 'visible' : ''}`}>
             <p className='navbar-dp-dropdown-items'>Profile</p>
             <p className='navbar-dp-dropdown-items'>Orders</p>
@@ -84,14 +84,14 @@ const Navbar = () => {
         <Link to='/cart'>
           <div className='navbar-icons-cart'>
             <img src={assets.cart_icon} alt='cart' />
-            <p className='navbar-cart-number'>0</p>
+            <p className='navbar-cart-number'>{getCartCount()}</p>
           </div>
         </Link>
-        <img 
-          className="navbar-hamburger" 
-          src={assets.menu_icon} 
-          alt='menu' 
-          onClick={toggleMenu} 
+        <img
+          className="navbar-hamburger"
+          src={assets.menu_icon}
+          alt='menu'
+          onClick={toggleMenu}
         />
       </div>
 

@@ -196,7 +196,7 @@ const Collection = () => {
 
       <div className='collection-right'>
           <div className='collection-right-up'>
-            <Title title1={'ALL'} title2={'COLLECTION'} />
+            <Title title1={'ALL'} title2={'COLLECTION'} size={'2.3rem'} />
             
             <select onChange={(e)=>setSortType(e.target.value)} className='collection-sort'>
               <option value="relavent">Sort by: Relavent</option>
