@@ -54,16 +54,16 @@ const Navbar = () => {
 
       <div className='navbar-elements'>
         <NavLink to='/' className='navbar-elements-item'>
-          Home
+          HOME
         </NavLink>
         <NavLink to='/collection' className='navbar-elements-item'>
-          Collection
+          COLLECTION
         </NavLink>
         <NavLink to='/about' className='navbar-elements-item'>
-          About
+          ABOUT
         </NavLink>
         <NavLink to='/contact' className='navbar-elements-item'>
-          Contact
+          CONTACT
         </NavLink>
       </div>
 

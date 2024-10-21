@@ -31,13 +31,13 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-section footer-subscribe">
+        {/* <div className="footer-section footer-subscribe">
           <p className="footer-title">Subscribe Here</p>
           <form className="subscribe-form">
             <input type="text" placeholder="Enter your email..." className="subscribe-input" />
             <input type="submit" value="Submit" className="subscribe-button" />
           </form>
-        </div>
+        </div> */}
       </div>
       <div>
         <hr/>

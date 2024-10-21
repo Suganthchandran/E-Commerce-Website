@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 .navbar {
-    height: 9vh;
+    height: 10vh;
     width: 100%;
     background-color: #ffffff;
     color: white;
@@ -27,8 +27,8 @@
 
 .navbar-elements-item {
     font-size: 1.3rem;
-    font-weight: 700;
-    font-family: Montserrat;
+    font-weight: 900;
+    font-family: mooli;
     color: black;
     text-decoration: none;
     position: relative;
