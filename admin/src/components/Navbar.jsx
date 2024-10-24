@@ -1,12 +1,11 @@
 import React from 'react'
-import {assets} from '../assets/assets'
 import '../styles/Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({setToken}) => {
   return (
     <div className='navbar'>
       <h1 className='navbar-logo'>Diago Admin Panel</h1>
-      <button className='navbar-button'>Logout</button>
+      <button onClick={()=>setToken("")} className='navbar-button'>Logout</button>
     </div>
   )
 }
