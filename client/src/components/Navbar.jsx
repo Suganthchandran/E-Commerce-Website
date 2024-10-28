@@ -8,9 +8,15 @@ import { ShopContext } from '../context/ShopContext';
 const Navbar = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isMenuVisible, setMenuVisible] = useState(false);
-  const { setShowSearch, getCartCount } = useContext(ShopContext);
+  const { setShowSearch, getCartCount, navigate, token, setToken, setCartItems } = useContext(ShopContext);
   const location = useLocation();
-  const navigate = useNavigate();
+
+  const handleLogout = ()=> {
+    navigate('/login')
+    localStorage.removeItem('token');
+    setToken('');
+    setCartItems({});
+  }
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -19,7 +25,7 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     setTimeout(() => {
       setDropdownVisible(false);
-    }, 1000);
+    }, 3000);
   };
 
   const toggleMenu = () => {
@@ -74,12 +80,12 @@ const Navbar = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-         <Link to='/login'> <img className='navbar-dp' src={assets.profile_icon} alt='dp' /> </Link>
-          <div className={`navbar-dp-dropdown ${isDropdownVisible ? 'visible' : ''}`}>
+         <img onClick={()=> token ? null : navigate('/login')} className='navbar-dp' src={assets.profile_icon} alt='dp' />
+         {token &&  <div className={`navbar-dp-dropdown ${isDropdownVisible ? 'visible' : ''}`}>
             <p className='navbar-dp-dropdown-items'>Profile</p>
-            <p className='navbar-dp-dropdown-items'>Orders</p>
-            <p className='navbar-dp-dropdown-items'>Logout</p>
-          </div>
+            <p onClick={()=>navigate('/orders')} className='navbar-dp-dropdown-items'>Orders</p>
+            <p onClick={handleLogout} className='navbar-dp-dropdown-items'>Logout</p>
+          </div>}
         </div>
         <Link to='/cart'>
           <div className='navbar-icons-cart'>

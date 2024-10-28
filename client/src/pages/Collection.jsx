@@ -75,7 +75,7 @@ const Collection = () => {
 
   useEffect(()=>{
     applyFilter();
-  },[category,type,clothing,material,search,showSearch]);
+  },[category,type,clothing,material,search,showSearch,products]);
 
   const sortProduct = () => {
     let fpCopy = filterProducts.slice();
@@ -96,22 +96,6 @@ const Collection = () => {
   useEffect(()=>{
     sortProduct();
   },[sortType])
-
-  // useEffect(()=>{
-  //   console.log(category);
-  // },[category])
-
-  // useEffect(()=>{
-  //   console.log(type);
-  // },[type])
-
-  // useEffect(()=>{
-  //   console.log(clothing);
-  // },[clothing])
-
-  // useEffect(()=>{
-  //   console.log(material);
-  // },[material])
   
   return (
     <div className="collection">
@@ -140,13 +124,13 @@ const Collection = () => {
           <p className="category-title">TYPE</p>
           <div className='categorise'>
             <p className='categorise-content'>
-              <input type='checkbox' value={'Animewear'} onClick={toggleType} /> Animewear
-            </p>
-            <p className='categorise-content'>
               <input type='checkbox' value={'Topwear'} onClick={toggleType} /> Topwear
             </p>
             <p className='categorise-content'>
               <input type='checkbox' value={'Bottomwear'} onClick={toggleType} /> Bottomwear
+            </p>
+            <p className='categorise-content'>
+              <input type='checkbox' value={'Animewear'} onClick={toggleType} /> Animewear
             </p>
           </div>
         </div>
