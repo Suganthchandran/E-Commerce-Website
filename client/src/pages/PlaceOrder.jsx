@@ -133,10 +133,10 @@ const PlaceOrder = () => {
               <p className={`placeorder-payment-method-ptag ${method === 'stripe' ? 'placeorder-method-active' : ''} `}></p>
               <img className='placeorder-payment-image' src={assets.stripe_logo} alt='' />
             </div>
-            <div onClick={() => setMethod('razorpay')} className='placeorder-payment-method'>
+            {/* <div onClick={() => setMethod('razorpay')} className='placeorder-payment-method'>
               <p className={`placeorder-payment-method-ptag ${method === 'razorpay' ? 'placeorder-method-active' : ''} `}></p>
               <img className='placeorder-payment-image' src={assets.razorpay_logo} alt='' />
-            </div>
+            </div> */}
             <div onClick={() => setMethod('cod')} className='placeorder-payment-method'>
               <p className={`placeorder-payment-method-ptag ${method === 'cod' ? 'placeorder-method-active' : ''} `}></p>
               <p className='placeorder-payment-cod'>CASH ON DELIVERY</p>
