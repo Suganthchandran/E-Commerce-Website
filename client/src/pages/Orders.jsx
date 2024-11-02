@@ -16,7 +16,7 @@ const Orders = () => {
         return null
       }
 
-      const response = await axios.post('http://localhost:4000/api/order/userorders',{},{headers:{token}})
+      const response = await axios.post('https://diago-backend.vercel.app/api/order/userorders',{},{headers:{token}})
       if(response.data.success) {
         let allOrdersItem = [];
         response.data.orders.map((order)=>{

@@ -41,7 +41,7 @@ const ShopContextProvider = (props) => {
 
         if(token) {
             try {
-                await axios.post("http://localhost:4000/api/cart/add",{itemId,size}, {headers:{token}})
+                await axios.post("https://diago-backend.vercel.app/api/cart/add",{itemId,size}, {headers:{token}})
 
             }
             catch(error) {
@@ -78,7 +78,7 @@ const ShopContextProvider = (props) => {
 
         if(token) {
             try {
-                await axios.post('http://localhost:4000/api/cart/update',{itemId,size,quantity},{headers:{token}});
+                await axios.post('https://diago-backend.vercel.app/api/cart/update',{itemId,size,quantity},{headers:{token}});
             }
             catch(error) {
                 console.log(error)
@@ -89,7 +89,7 @@ const ShopContextProvider = (props) => {
 
     const getUserCart = async (token)=> {
         try {
-            const response = await axios.post('http://localhost:4000/api/cart/get',{},{headers:{token}})
+            const response = await axios.post('https://diago-backend.vercel.app/api/cart/get',{},{headers:{token}})
             if(response.data.success) {
                 setCartItems(response.data.cartData)
             }
@@ -121,7 +121,7 @@ const ShopContextProvider = (props) => {
 
     const getProductData = async ()=> {
         try {
-            const response = await axios.get('http://localhost:4000/api/product')
+            const response = await axios.get('https://diago-backend.vercel.app/api/product')
             console.log(response.data.products)
             if(response.data.success) {
                 setProducts(response.data.products);
