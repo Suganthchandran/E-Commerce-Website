@@ -56,7 +56,7 @@ const Orders = () => {
                                 <p>{item.name}</p>
                                 <div style={{marginTop:'0.5rem'}} className='order-info'>
                                     <p style={{fontSize:'1.2rem'}}>{currency} {item.price}</p>
-                                    <p>Qunatity: {item.quantity}</p>
+                                    <p>Quantity: {item.quantity}</p>
                                     <p>Size: {item.size}</p>
                                 </div>
                                 <p style={{color: 'grey',marginTop:'0.5rem'}}>Date: <span style={{color:'grey',fontWeight:'400'}}>{new Date(item.date).toDateString()}</span></p>

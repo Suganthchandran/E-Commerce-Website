@@ -13,8 +13,8 @@
 }
 
 .navbar-logo-image {
-    width: 120px;
-    height: 50px; 
+    width: 65px;
+    height: 65px; 
     cursor: pointer;
 }
 
@@ -224,6 +224,26 @@
     .navbar-hamburger{
         display: block;
     }
+
+    .navbar {
+        height: 8vh;
+    }
+
+    .navbar-icons img{
+        width: 22px;
+        height: 22px;
+    }
+
+    .navbar-cart-number {
+        font-size: 0.7rem;
+        width: 16px;
+        height: 16px;
+    }
+
+    .navbar-logo-image {
+        width: 50px;
+        height: 50px; 
+    }
 }
 
 @media (max-width:370px) {
@@ -239,6 +259,11 @@
     .navbar-mobile-menu-close{
         font-size: 3rem;
         margin-top: -10px;
+    }
+
+    .navbar-logo-image {
+        width: 40px;
+        height: 40px; 
     }
 
 }
