@@ -22,7 +22,7 @@ const SearchBar = () => {
   return showSearch && visible ? (
     <div className='searchbar'>
       <div className='searchbar-items'>
-        <input className='searchbar-input' type='text' placeholder='Search' value={search} onChange={(e)=>setSearch(e.target.value)} />
+        <input className='searchbar-input' type='text' placeholder='Search' value={search} onChange={(e)=>setSearch(e.target.value)} autoFocus/>
         <img src={assets.search_icon} />
       </div>
       <img className='searchbar-close' src={assets.cross_icon} onClick={()=>setShowSearch(false)}/>

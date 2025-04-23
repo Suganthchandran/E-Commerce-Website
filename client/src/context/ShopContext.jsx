@@ -41,6 +41,7 @@ const ShopContextProvider = (props) => {
 
         if(token) {
             try {
+                toast.success("Item Added to Cart")
                 await axios.post("https://diago-backend.vercel.app/api/cart/add",{itemId,size}, {headers:{token}})
 
             }
