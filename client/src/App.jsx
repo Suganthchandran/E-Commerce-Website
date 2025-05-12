@@ -18,6 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
 
 // Testing 
+// Testing 2
 const App = () => {
   return (
     <div className='app-main'>
